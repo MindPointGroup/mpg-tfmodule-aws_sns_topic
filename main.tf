@@ -40,9 +40,7 @@ data "aws_iam_policy_document" "config_sns_access_policy" {
       test     = "StringEquals"
       variable = "AWS:SourceOwner"
 
-      values = [
-        "${var.sns_topic_owner}",
-      ]
+      values = [var.sns_topic_owner]
     }
   }
 
