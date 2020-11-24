@@ -41,7 +41,7 @@ data "aws_iam_policy_document" "config_sns_access_policy" {
       variable = "AWS:SourceOwner"
 
       values = [
-        "${var.sns_topic_owner}",
+        "var.sns_topic_owner",
       ]
     }
   }
